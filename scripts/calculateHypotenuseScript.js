@@ -1,5 +1,5 @@
 const sides = document.querySelectorAll('.sides-input');
-const calculateHypotenuseBtn = document.querySelector('#calculate-btn');
+const calculateHypotenuseBtn = document.querySelector('#calculate-hypo-btn');
 const errorMessage = document.querySelector('#error');
 const outputMessage = document.querySelector('#output');
 
