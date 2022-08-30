@@ -5,11 +5,16 @@ const outputMessage = document.querySelector('#output');
 
 calculateHypotenuseBtn.addEventListener('click', calculateHypotenuse);
 
+function calculateSumOfSquares(a,b){
+    const sumOfSquares = (a**2)+(b**2);
+    return sumOfSquares;
+}
+
 function calculateHypotenuse(){
     if(Number(sides[0].value)!==0 && Number(sides[1].value)!==0){
         errorMessage.style.display = "none";
         outputMessage.style.display = "block";
-        const sumOfSquares = Number(sides[0].value)*Number(sides[0].value) + Number(sides[1].value)*Number(sides[1].value);
+        const sumOfSquares = calculateSumOfSquares(Number(sides[0].value),Number(sides[1].value));
         const lengthOfHypotenuse = Math.sqrt(sumOfSquares);
         outputMessage.innerText = "The length of hypotenuse is = "+lengthOfHypotenuse;
     } else{
