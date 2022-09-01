@@ -74,6 +74,10 @@ footer {
     border-top-right-radius: 2rem;
 }
 
+.footer-list {
+    padding-inline-start: 0px;
+}
+
 .portfolio {
     text-decoration: none;
     color: var(--dark-purple);
