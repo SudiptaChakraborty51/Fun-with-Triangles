@@ -23,6 +23,14 @@ function isTriangle(){
 }
 
 function calculateSumOfAngles(){
-    const sumOfAngles = Number(angles[0].value) + Number(angles[1].value) + Number(angles[2].value);
-    return sumOfAngles;
+    if(Number(angles[0].value)>0 && Number(angles[1].value)>0 && Number(angles[2].value)>0){
+        errorMessage.style.display = "none";
+        outputMessage.style.display = "block";
+        const sumOfAngles = Number(angles[0].value) + Number(angles[1].value) + Number(angles[2].value);
+        return sumOfAngles;
+    } else {
+        errorMessage.style.display = "block";
+        outputMessage.style.display = "none";
+        errorMessage.innerText = "Please enter the positive values of all angles!";
+    }
 }

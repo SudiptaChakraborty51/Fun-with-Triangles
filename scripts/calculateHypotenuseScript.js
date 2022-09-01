@@ -6,8 +6,14 @@ const outputMessage = document.querySelector('#output');
 calculateHypotenuseBtn.addEventListener('click', calculateHypotenuse);
 
 function calculateSumOfSquares(a,b){
-    const sumOfSquares = (a**2)+(b**2);
-    return sumOfSquares;
+    if(a>0 && b>0){
+        const sumOfSquares = (a**2)+(b**2);
+        return sumOfSquares;
+    } else {
+        errorMessage.style.display = "block";
+        outputMessage.style.display = "none";
+        errorMessage.innerText = "Please enter both positive values of a & b!";
+    }
 }
 
 function calculateHypotenuse(){
